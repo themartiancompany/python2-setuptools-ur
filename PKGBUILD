@@ -23,7 +23,6 @@ depends=(
   "${_py}")
 makedepends=(
   'git'
-  'python-setuptools'
 )
 provides=(
   "${_py}-distribute")
