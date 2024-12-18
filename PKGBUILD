@@ -12,26 +12,39 @@ pkgname="${_py}-${_pkg}"
 pkgver=44.1.1
 pkgrel=2
 epoch=2
-pkgdesc="Easily download, build, install, upgrade, and uninstall Python packages"
+_pkgdesc=(
+  "Easily download, build,"
+  "install, upgrade, and uninstall"
+  "Python packages"
+)
 arch=(
-  'any')
+  'any'
+)
 license=(
-  'PSF')
+  'PSF'
+)
 url="https://pypi.org/project/${_pkg}"
-_url="https://github.com/pypa/${_pkg}"
+_http="https://github.com"
+_ns="pypa"
+_url="${_http}/${_ns}/${_pkg}"
 depends=(
-  "${_py}")
+  "${_py}"
+)
 makedepends=(
   'git'
 )
 provides=(
-  "${_py}-distribute")
+  "${_py}-distribute"
+)
 replaces=(
-  "${_py}-distribute")
+  "${_py}-distribute"
+)
 source=(
-  "${pkgname}-${pkgver}.tar.gz::${_url}/archive/v${pkgver}.tar.gz")
+  "${pkgname}-${pkgver}.tar.gz::${_url}/archive/v${pkgver}.tar.gz"
+)
 sha512sums=(
-  'aabddfbd62b95ce7d8e68d582362361d32b91e65e6d00c393593521a2c1c383552e324ae64974049ae9880072c8741e2393e6482cd07ff7dd30615e91e9e1450')
+  'aabddfbd62b95ce7d8e68d582362361d32b91e65e6d00c393593521a2c1c383552e324ae64974049ae9880072c8741e2393e6482cd07ff7dd30615e91e9e1450'
+)
 
 export \
   SETUPTOOLS_INSTALL_WINDOWS_SPECIFIC_FILES=0
